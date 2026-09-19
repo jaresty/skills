@@ -1,6 +1,6 @@
 ---
 name: syn
-description: Render a precise sensory model of a difficult relationship, mechanism, boundary, uncertainty, or system behavior. Use when the user invokes "syn", invokes a syn modifier such as sight, hearing, smell, touch, taste, near, or far, or asks for a sensory model that makes complex structure easier to understand.
+description: Render a precise sensory model of a difficult relationship, mechanism, boundary, uncertainty, or system behavior. Use when the user invokes "syn", invokes a syn modifier such as sight, hearing, smell, touch, taste, vary, near, or far, or asks for a sensory model that makes complex structure easier to understand.
 ---
 
 # Sensory orientation with `syn` and `ack`
@@ -27,7 +27,20 @@ These affordances guide model selection; they are not mandatory headings.
 - **Touch — constraint and interaction.** Use for direct testing, boundaries, coupling, friction, pressure, resistance, flexibility, yielding, breakage, and the limit of empirical contact. Local contact does not establish the whole.
 - **Taste — composition and incorporation.** Use for mixture, concentration, compatibility, imbalance, conflict among ingredients, consequences of acceptance, and lingering effects. Coherence or preference does not establish truth or authority.
 
-Use only these five senses as the metaphor library. Do not add proprioception, balance, intuition, or other senses.
+Prefer these five familiar senses because their operating logic is normally understood without explanation.
+
+### Extended sensory affordances
+
+Human and non-human senses may extend the library when they provide a distinctive communication operator that the familiar senses cannot express as clearly. Examples include:
+
+- **Echolocation — active probing.** Emit a signal, compare its returns, and infer otherwise hidden boundaries or structure.
+- **Magnetoreception — field-relative orientation.** Maintain direction or position relative to a pervasive field rather than visible landmarks.
+- **Lateral-line sensing — disturbance in a shared medium.** Detect remote movement, pressure, or approach through effects propagated by the surrounding environment.
+- **Polarization vision — normally hidden structure.** Distinguish patterns present in an observable signal but unavailable to ordinary perception.
+
+This list is illustrative, not exhaustive. Automatically select an extended affordance only when its operating logic can be understood in one short clause, it maps more precisely than a familiar sense, and explaining it costs less than the insight it provides. Otherwise use a familiar sense. When an extended sense is explicitly requested, briefly explain its operating logic and say when a familiar affordance would be clearer.
+
+Use biological sensing as a functional abstraction, not as a claim about an animal's subjective experience. Do not use an unusual sense merely for novelty, and do not treat intuition or extrasensory claims as sensory evidence.
 
 ## Method
 
@@ -36,14 +49,17 @@ When `syn` is invoked:
 1. Identify the specific relationship, mechanism, boundary, uncertainty, or system behavior that is currently difficult to grasp. Do not summarize the entire conversation by default.
 2. Choose the sensory affordance or minimal combination whose familiar logic best matches that difficulty.
 3. Construct one economical sensory model. Prefer a common, immediately understandable interaction such as seeing a map, hearing overlapping rhythms, following a scent gradient, pulling on connected parts, or tasting a mixture. Do not elaborate the scene beyond what the mapping requires.
-4. State the mapping explicitly. Identify what each material element, distance, sound, trace, resistance, ingredient, or action represents. The mapping prevents metaphor from concealing reasoning.
-5. State the practical implication: what the model makes easier to understand, test, decide, or attend to.
-6. Preserve uncertainty, provenance, authority, and evidence ceilings from the underlying work. Label inference where needed.
+4. Ask whether one controlled variation would reveal an invariant, boundary, transition, or behavior concealed by the initial arrangement. If so, include it; otherwise keep the single model. Change one named dimension at a time and identify what is preserved or tested. Do not add variation merely to make the response richer.
+5. State the mapping explicitly. Identify what each material element, distance, sound, trace, resistance, ingredient, or action represents. The mapping prevents metaphor from concealing reasoning.
+6. State the practical implication: what the model makes easier to understand, test, decide, or attend to.
+7. Preserve uncertainty, provenance, authority, and evidence ceilings from the underlying work. Label inference where needed.
 
 ## Modifiers
 
 - `syn` selects the most useful sensory affordance automatically.
 - `syn sight`, `syn hearing`, `syn smell`, `syn touch`, or `syn taste` asks for a model using that affordance when it can be applied without distortion. If the requested sense is a poor fit, say so briefly and use the closest valid affordance.
+- A named extended sense, such as `syn echolocation`, requests that affordance. Briefly explain its operating logic; if it adds more explanation than insight or would distort the structure, say so and use the closest familiar affordance.
+- `syn vary` requires two or more controlled configurations of the model. Name the dimension changed and the structural property preserved or tested. Without this modifier, include at most one variation and only when it materially improves understanding.
 - `syn near` models the immediate decision, obstacle, or next interaction.
 - `syn far` models the broader structure, scale, dependencies, or horizon.
 - Equivalent natural-language requests also activate this skill.
@@ -55,6 +71,8 @@ Begin with `ack`. Normally use this concise shape:
 **Model:** One to three sentences expressing the complex idea through the selected sensory intuition.
 
 **Mapping:** A short list pairing each metaphor element with the actual concept it represents. Include only elements necessary to understand the structure.
+
+**Variation:** Include only when it reveals an invariant, boundary, transition, or behavior. State what changes and what remains fixed or is being tested.
 
 **Implication:** The insight, test, decision, or attentional shift made available by the model.
 
@@ -70,6 +88,8 @@ Before sending, silently verify:
 4. **Fit:** Does the selected sense exploit its distinctive affordance rather than merely decorate the prose?
 5. **Transparency:** Is the metaphor-to-reality mapping explicit enough to inspect and challenge?
 6. **Boundary:** Does the model preserve what is observed, inferred, unknown, provisional, and outside the LLM's authority?
-7. **No categorization:** Did the response model one difficult structure rather than distribute facts among sensory headings?
+7. **Variation:** If the model varies, is the changed dimension named and the invariant or tested property explicit? Does the variation reveal something the initial configuration conceals?
+8. **Extended-sense threshold:** If an extended affordance is used, is its operation quickly understandable, structurally superior to a familiar affordance, and free of claims about subjective animal experience?
+9. **No categorization:** Did the response model one difficult structure rather than distribute facts among sensory headings?
 
-A response fails when it is merely a status report with sensory vocabulary, when it uses all five senses without need, or when vividness exceeds explanatory value.
+A response fails when it is merely a status report with sensory vocabulary, when it uses all five senses without need, when variation adds no structural insight, when an unusual sense adds more explanation than leverage, or when vividness exceeds explanatory value.
