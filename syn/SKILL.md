@@ -49,7 +49,7 @@ When `syn` is invoked:
 1. Identify the specific relationship, mechanism, boundary, uncertainty, or system behavior that is currently difficult to grasp. Do not summarize the entire conversation by default.
 2. Choose the sensory affordance or minimal combination whose familiar logic best matches that difficulty.
 3. Construct one economical sensory model. Prefer a common, immediately understandable interaction such as seeing a map, hearing overlapping rhythms, following a scent gradient, pulling on connected parts, or tasting a mixture. Do not elaborate the scene beyond what the mapping requires.
-4. Ask whether one controlled variation would reveal an invariant, boundary, transition, or behavior concealed by the initial arrangement. If so, include it; otherwise keep the single model. Change one named dimension at a time and identify what is preserved or tested. Do not add variation merely to make the response richer.
+4. Ask whether rearranging or recomposing the same modeled elements would reveal an invariant concealed by the initial presentation. If so, include one controlled variation; otherwise keep the single model. Change only the representation, arrangement, grouping, scale, or viewpoint while preserving the modeled structure, and name the invariant demonstrated across configurations. If an actual property of the subject changes, label that operation a **counterfactual** or **perturbation**, not a variation. Do not add any transformation merely to make the response richer.
 5. State the mapping explicitly. Identify what each material element, distance, sound, trace, resistance, ingredient, or action represents. The mapping prevents metaphor from concealing reasoning.
 6. State the practical implication: what the model makes easier to understand, test, decide, or attend to.
 7. Preserve uncertainty, provenance, authority, and evidence ceilings from the underlying work. Label inference where needed.
@@ -59,7 +59,7 @@ When `syn` is invoked:
 - `syn` selects the most useful sensory affordance automatically.
 - `syn sight`, `syn hearing`, `syn smell`, `syn touch`, or `syn taste` asks for a model using that affordance when it can be applied without distortion. If the requested sense is a poor fit, say so briefly and use the closest valid affordance.
 - A named extended sense, such as `syn echolocation`, requests that affordance. Briefly explain its operating logic; if it adds more explanation than insight or would distort the structure, say so and use the closest familiar affordance.
-- `syn vary` requires two or more controlled configurations of the model. Name the dimension changed and the structural property preserved or tested. Without this modifier, include at most one variation and only when it materially improves understanding.
+- `syn vary` requires two or more controlled configurations of the same modeled structure. Vary its representation, arrangement, grouping, scale, or viewpoint and name the invariant preserved across them. Do not satisfy this modifier by changing an actual system property or comparing alternative decisions; label those operations as counterfactuals or perturbations instead. Without this modifier, include at most one variation and only when it materially improves understanding.
 - `syn near` models the immediate decision, obstacle, or next interaction.
 - `syn far` models the broader structure, scale, dependencies, or horizon.
 - Equivalent natural-language requests also activate this skill.
@@ -72,7 +72,9 @@ Begin with `ack`. Normally use this concise shape:
 
 **Mapping:** A short list pairing each metaphor element with the actual concept it represents. Include only elements necessary to understand the structure.
 
-**Variation:** Include only when it reveals an invariant, boundary, transition, or behavior. State what changes and what remains fixed or is being tested.
+**Variation:** Include only when recomposing the same modeled elements reveals an invariant. State what representational dimension changes and what structural property remains definitionally fixed.
+
+**Counterfactual:** Use this separate label only when changing an actual property, policy, condition, or decision to explore its consequences.
 
 **Implication:** The insight, test, decision, or attentional shift made available by the model.
 
@@ -88,8 +90,8 @@ Before sending, silently verify:
 4. **Fit:** Does the selected sense exploit its distinctive affordance rather than merely decorate the prose?
 5. **Transparency:** Is the metaphor-to-reality mapping explicit enough to inspect and challenge?
 6. **Boundary:** Does the model preserve what is observed, inferred, unknown, provisional, and outside the LLM's authority?
-7. **Variation:** If the model varies, is the changed dimension named and the invariant or tested property explicit? Does the variation reveal something the initial configuration conceals?
+7. **Variation:** If the model varies, are the subject and its defining relationships preserved while only representation, arrangement, grouping, scale, or viewpoint changes? Is the invariant explicit? If an actual property changes, has the operation been relabeled as a counterfactual or perturbation?
 8. **Extended-sense threshold:** If an extended affordance is used, is its operation quickly understandable, structurally superior to a familiar affordance, and free of claims about subjective animal experience?
 9. **No categorization:** Did the response model one difficult structure rather than distribute facts among sensory headings?
 
-A response fails when it is merely a status report with sensory vocabulary, when it uses all five senses without need, when variation adds no structural insight, when an unusual sense adds more explanation than leverage, or when vividness exceeds explanatory value.
+A response fails when it is merely a status report with sensory vocabulary, when it uses all five senses without need, when variation changes the subject instead of recomposing its representation, when variation adds no structural insight, when an unusual sense adds more explanation than leverage, or when vividness exceeds explanatory value.
